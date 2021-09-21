@@ -1,0 +1,53 @@
+<div class="Login_Page">
+    <div class=Login_Wrapper>
+        
+        <div class="Login_Box">
+            <div class="Login_Header">
+                
+            </div>
+            <div class="Login_Body">
+                <h1 style="text-align:center" class="NXVPg Szr5J  coreSpriteLoggedOutWordmark">OFFBEAT ESCAPE</h1>
+                <br>
+                <form #loginForm>
+                    <div class="Login_Body__User_Avatar">
+                        <img src="../../assets/user.png" alt="Avatar" class="avatar">
+                    </div>
+                    <div class="Login_Body__Email_Wrapper">
+                        <mat-form-field appearance="standard" [style.width.%]="100">
+                            <mat-label>Enter your email</mat-label>
+                            <input matInput placeholder="johndoe@gmail.com" [(ngModel)]="credentials.username" #username="ngModel" name="username" id="username" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                            <mat-error *ngIf="(username.invalid && (username.dirty || username.touched) && (username.errors.required))">Please enter email</mat-error>
+                            <mat-error *ngIf="(username.invalid && (username.dirty || username.touched) && (username.errors.pattern))">Please enter valid email</mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="Login_Body__Password_Wrapper">
+                        <mat-form-field appearance="standard" [style.width.%]="100">
+                            <mat-label>Enter Password</mat-label>
+                            <input matInput type="password" minlength="8" [(ngModel)]="credentials.password" #password="ngModel" name="password" id="exampleInputPassword1" required>
+                            <mat-error *ngIf="(password.invalid && (password.dirty || password.touched) && password.errors.minlength)">Please enter password with atleast 8 characters</mat-error>
+                            <mat-error *ngIf="(password.invalid && (password.dirty || password.touched) && password.errors.required)">Please enter password</mat-error>
+                        </mat-form-field>  
+                    </div>
+                    <div class="Login_Body_Submit_Button_Wrapper">
+                        <button mat-raised-button [disabled]='username.invalid || password.invalid' (click)="onLoginClick()">Submit</button>
+                        <div (click)="goToSignUp()">
+                            <mat-hint>New here? Signup..</mat-hint>
+                        </div>
+                    </div>
+                    <div class="Login_Body__Social_Buttons_Wrapper">
+                        <span (click)="signInWithFB()">
+                            <i class="fa fa-facebook-square fa-3x" aria-hidden="true"> </i>
+                        </span>
+                        <span (click)="signInWithGoogle()">
+                            <i class="fa fa-google fa-3x" aria-hidden="true"> </i>
+                        </span>
+                    </div>  
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<ngx-spinner type="line-scale-pulse-out-rapid">
+  <p style="font-size: 20px; color: white">Loading...</p>
+</ngx-spinner>
+<particles [params]="myParams" [style]="myStyle" [width]="100" [height]="100"></particles>

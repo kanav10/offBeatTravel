@@ -1,0 +1,36 @@
+<app-header>
+
+</app-header>
+<div class="Settings_Page_Wrapper">
+    <div class="Settings_Wrapper">
+        <div><h1>User Settings</h1></div>
+        <div class="Settings_Form">
+            <div class="Form_Field_Update_Name">
+                 <h2>{{user.username}}</h2>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="Form_Field_Update_Profile_Picture">
+                <div class="Form_Field_Input">
+                    <div class="Current_User_Image_Wrapper">
+                        <img *ngIf="!user.profileImage" src="../../assets/user.png">
+                        <img *ngIf="user.profileImage" src="{{user.profileImage}}">
+                        <div class="uploadProfilePicture">
+                            <input #imageInput
+                                type="file"
+                                name="image"
+                                id="imagepicker"
+                                accept="image/*"
+                                (change)="uploadFile(imageInput)"
+                                multiple="{false}"
+                                class="form-control-file"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div class="Form_Field_Action">
+                    <button (click)="addProfileImage()" mat-raised-button>Update Profile Picture</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

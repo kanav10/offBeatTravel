@@ -1,0 +1,142 @@
+.Dashboard_Wrapper {
+    overflow-x: hidden;
+    height: 100%;
+    .Dashboard_Wrapper_Posts_Wrapper {
+        width: 100%;
+        div {
+            width: 100%;
+        }
+        .Dashboard_Wrapper_Posts_Wrapper_TopPosts_Wrapper {
+            border-bottom: 1px solid #e8e8e8;
+            box-sizing: border-box;
+            padding: 1em;
+            .Dashboard_Wrapper_Posts_Wrapper_TopPosts_Header {
+                margin-bottom: 0.5em;
+                font-size: 1.2em;
+                span {
+                    margin-left: 0.2em;
+                }
+            }
+            .Dashboard_Wrapper_Posts_Wrapper_TopPosts_Individual_Post {
+                width: 45%;
+                display: inline-block;
+                cursor: pointer;
+                padding: 0.5em;
+                border: 1px solid rgb(216, 216, 216);
+                margin: 0.5em;
+                box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.19);
+                .Dashboard_Wrapper_Posts_Wrapper_TopPosts_Individual_Post_Button {
+                    width: 10%;
+                    display: inline-block;
+                    button {
+                        color: #ffffff;
+                        background-color: #000000;
+                    }
+                }
+                .Dashboard_Wrapper_Posts_Wrapper_TopPosts_Individual_Post_Text {
+                    width: 90%;
+                    font-size: 0.875em;
+                    display: inline-block;
+                } 
+            }
+        }
+        .Dashboard_Wrapper_Posts_Wrapper_Posts {
+            width: 70%;
+            margin: 0 auto;
+            .Dashboard_Wrapper_Posts_Wrapper_Individual_Post {
+                padding: 2em;
+                cursor: pointer;
+                .Dashboard_Wrapper_Posts_Wrapper_Individual_Post_Text {
+                    padding: 0.5em;
+                    .header {
+                        h3 {
+                            font-size: 1.5em;
+                            font-weight: 700;
+                        }
+                    }
+                    .content {
+                        color:  0 0 0 0.87;
+                        font-size: 0.875em;
+                    }    
+                } 
+                .Dashboard_Wrapper_Posts_Wrapper_Individual_Post_Image {
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+    .Dashboard_Wrapper_Friends_Reading_List_Wrapper {
+        div {
+            width: 100%;
+        }
+        .Dashboard_Add_Friends_Wrapper {
+            width: 100%;
+            h1 {
+                padding: 0.5em;
+                margin: 0;
+            }
+            .Friends_Image_Wrapper {
+                img {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    vertical-align: middle;
+                }
+            }
+            .Friend_Wrapper {
+                font-size: 1em;
+                font-weight: bold;
+                padding: 0.75em 0.75em 0.75em 0.75em;
+                span {
+                    padding: 0.5em;
+                }
+                .Friends_Add_Friend {
+                    padding: 0;
+                    margin-right: 10px;
+                }
+                .Friend_Name {
+                    width: 40%;
+                    padding-top: 5px;
+                }
+            }
+            .Friends_List_See_More {
+                cursor: pointer;
+                text-decoration: underline;
+                font-size: 0.75em;
+                padding: 0.5em;
+            }
+        }
+        .Dashboard_Reading_Lists_Wrapper {
+            width: 100%;
+            h1 {
+                padding: 0.5em;
+                margin: 0;
+            }
+            .Reading_List {
+                font-size: 1em;
+                font-weight: bold;
+                cursor: pointer;
+                .Reading_List_Item {
+                    padding: 0.75em;
+                }
+                span {
+                    margin-right: 0.5em;
+                }
+            }
+        }
+    }
+}
+
+.example-card {
+    padding: 0;
+}
+
+.Dashboard_No_Post_Display {
+    font-size: 3em;
+    text-align: center;
+    margin-top: 2em;
+}
